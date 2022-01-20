@@ -1,0 +1,40 @@
+{
+  "fields": [
+    {
+      "fieldName": "modelo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "5",
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "color",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "potencia",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "plazas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "precio",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipName": "marca",
+      "otherEntityName": "marca",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "marca"
+    }
+  ],
+  "service": "no",
+  "readOnly": false,
+  "pagination": "pagination",
+  "name": "Modelo",
+  "changelogDate": "20220120205239"
+}
