@@ -38,6 +38,17 @@ public class Modelo implements Serializable {
     @Column(name = "precio")
     private Double precio;
 
+    @Column(name = "numero_serie")
+    private String numero_serie;
+
+    public String getNumero_serie() {
+        return numero_serie;
+    }
+
+    public void setNumero_serie(String numero_serie) {
+        this.numero_serie = numero_serie;
+    }
+
     @ManyToOne
     private Marca marca;
 

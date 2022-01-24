@@ -146,6 +146,9 @@ public class ModeloResource {
                 if (modelo.getPrecio() != null) {
                     existingModelo.setPrecio(modelo.getPrecio());
                 }
+                if (modelo.getNumero_serie() != null) {
+                    existingModelo.setNumero_serie(modelo.getNumero_serie());
+                }
 
                 return existingModelo;
             })

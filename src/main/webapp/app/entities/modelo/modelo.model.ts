@@ -8,6 +8,7 @@ export interface IModelo {
   plazas?: number | null;
   precio?: number | null;
   marca?: IMarca | null;
+  numero_serie?: string;
 }
 
 export class Modelo implements IModelo {
@@ -18,7 +19,8 @@ export class Modelo implements IModelo {
     public potencia?: number | null,
     public plazas?: number | null,
     public precio?: number | null,
-    public marca?: IMarca | null
+    public marca?: IMarca | null,
+    public numero_serie?: string
   ) {}
 }
 

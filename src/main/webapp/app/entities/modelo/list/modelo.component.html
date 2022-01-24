@@ -32,24 +32,33 @@
     <table class="table table-striped" aria-describedby="page-heading">
       <thead>
         <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
-          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="id">
+            <span jhiTranslate="global.field.id">ID</span>
+            <fa-icon icon="sort"></fa-icon>
+          </th>
           <th scope="col" jhiSortBy="modelo">
-            <span jhiTranslate="concesionarioApp.modelo.modelo">Modelo</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="concesionarioApp.modelo.modelo">Modelo</span>
+            <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="color">
-            <span jhiTranslate="concesionarioApp.modelo.color">Color</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="concesionarioApp.modelo.color">Color</span>
+            <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="potencia">
-            <span jhiTranslate="concesionarioApp.modelo.potencia">Potencia</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="concesionarioApp.modelo.potencia">Potencia</span>
+            <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="plazas">
-            <span jhiTranslate="concesionarioApp.modelo.plazas">Plazas</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="concesionarioApp.modelo.plazas">Plazas</span>
+            <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="precio">
-            <span jhiTranslate="concesionarioApp.modelo.precio">Precio</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="concesionarioApp.modelo.precio">Precio</span>
+            <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col" jhiSortBy="marca.marca">
-            <span jhiTranslate="concesionarioApp.modelo.marca">Marca</span> <fa-icon icon="sort"></fa-icon>
+            <span jhiTranslate="concesionarioApp.modelo.marca">Marca</span>
+            <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col"></th>
         </tr>
@@ -64,6 +73,7 @@
           <td>{{ modelo.potencia }}</td>
           <td>{{ modelo.plazas }}</td>
           <td>{{ modelo.precio }}</td>
+          <td>{{ modelo.numero_serie }}</td>
           <td>
             <div *ngIf="modelo.marca">
               <a [routerLink]="['/marca', modelo.marca?.id, 'view']">{{ modelo.marca?.marca }}</a>

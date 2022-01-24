@@ -27,6 +27,7 @@ export class ModeloUpdateComponent implements OnInit {
     plazas: [],
     precio: [],
     marca: [],
+    numero_serie: [],
   });
 
   constructor(
@@ -90,6 +91,7 @@ export class ModeloUpdateComponent implements OnInit {
       plazas: modelo.plazas,
       precio: modelo.precio,
       marca: modelo.marca,
+      numero_serie: modelo.numero_serie,
     });
 
     this.marcasSharedCollection = this.marcaService.addMarcaToCollectionIfMissing(this.marcasSharedCollection, modelo.marca);
@@ -113,6 +115,7 @@ export class ModeloUpdateComponent implements OnInit {
       plazas: this.editForm.get(['plazas'])!.value,
       precio: this.editForm.get(['precio'])!.value,
       marca: this.editForm.get(['marca'])!.value,
+      numero_serie: this.editForm.get(['numero_serie'])!.value,
     };
   }
 }

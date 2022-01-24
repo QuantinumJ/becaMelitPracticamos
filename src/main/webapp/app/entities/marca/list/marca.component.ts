@@ -72,6 +72,17 @@ export class MarcaComponent implements OnInit {
     });
   }
 
+  update(marca: IMarca): void {
+    const modalRef = this.modalService.open(MarcaDeleteDialogComponent, { size: 'lg', backdrop: 'static' });
+    modalRef.componentInstance.marca = marca;
+    // unsubscribe not needed because closed completes on modal close
+    modalRef.closed.subscribe(reason => {
+      if (reason === 'deleted') {
+        this.loadPage();
+      }
+    });
+  }
+
   protected sort(): string[] {
     const result = [this.predicate + ',' + (this.ascending ? ASC : DESC)];
     if (this.predicate !== 'id') {

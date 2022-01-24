@@ -60,6 +60,11 @@
         </div>
 
         <div class="form-group">
+          <label class="form-control-label" jhiTranslate="concesionarioApp.modelo.numero_serie" for="field_serie">Serie</label>
+          <input type="text" class="form-control" name="numero_serie" id="field_serie" data-cy="serie" formControlName="numero_serie" />
+        </div>
+
+        <div class="form-group">
           <label class="form-control-label" jhiTranslate="concesionarioApp.modelo.marca" for="field_marca">Marca</label>
           <select class="form-control" id="field_marca" data-cy="marca" name="marca" formControlName="marca">
             <option [ngValue]="null"></option>

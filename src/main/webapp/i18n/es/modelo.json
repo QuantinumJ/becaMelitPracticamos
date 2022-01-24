@@ -23,7 +23,8 @@
       "potencia": "Potencia",
       "plazas": "Plazas",
       "precio": "Precio",
-      "marca": "Marca"
+      "marca": "Marca",
+      "numero_serie": "Numero_serie"
     }
   }
 }
